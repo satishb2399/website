@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Design tokens — SB Home Buyers (consumer seller site)
+   ------------------------------------------------------------------------
+   Direct-response, high-trust. Deep navy + warm gold (family resemblance to
+   the SB Realty identity, but a separate consumer brand), warm paper
+   background, generous type. One typeface: Inter.
+
+   To rebrand (CLAUDE.md §4 name decision): change lib/brand.ts for naming
+   and the values here for color.
+   ========================================================================= */
+
+:root {
+  --background: #fdfcf9;
+  --foreground: #16202e;
+
+  /* ---- Brand ---- */
+  --brand-navy:          #1b2a4a;
+  --brand-navy-deep:     #101c35;
+  --brand-navy-soft:     #2e4368;
+  --brand-gold:          #c8a96a;
+  --brand-gold-deep:     #a88840;
+  --brand-gold-light:    #ecdcb6;
+
+  /* ---- Surfaces ---- */
+  --surface:             #ffffff;
+  --surface-warm:        #f7f4ec;
+  --surface-navy:        var(--brand-navy-deep);
+
+  /* ---- Text ---- */
+  --ink:                 #16202e;
+  --ink-2:               #46536a;
+  --ink-3:               #77839a;
+  --ink-inverse:         #f4f6fa;
+  --ink-inverse-2:       #aab6cc;
+
+  /* ---- Lines ---- */
+  --line:                #e6e2d6;
+  --line-strong:         #cfc9b8;
+
+  /* ---- Semantic ---- */
+  --success:             #1a7f4b;
+  --danger:              #c03434;
+
+  --font-sans: var(--font-body, ui-sans-serif), system-ui, -apple-system, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(22 32 46 / 0.05), 0 8px 24px -8px rgb(22 32 46 / 0.10);
+  --shadow-pop:  0 24px 60px -16px rgb(16 28 53 / 0.28);
+}
+
+@theme inline {
+  --color-background:     var(--background);
+  --color-foreground:     var(--foreground);
+
+  --color-navy:           var(--brand-navy);
+  --color-navy-deep:      var(--brand-navy-deep);
+  --color-navy-soft:      var(--brand-navy-soft);
+  --color-gold:           var(--brand-gold);
+  --color-gold-deep:      var(--brand-gold-deep);
+  --color-gold-light:     var(--brand-gold-light);
+
+  --color-surface:        var(--surface);
+  --color-surface-warm:   var(--surface-warm);
+  --color-surface-navy:   var(--surface-navy);
+
+  --color-ink:            var(--ink);
+  --color-ink-2:          var(--ink-2);
+  --color-ink-3:          var(--ink-3);
+  --color-ink-inverse:    var(--ink-inverse);
+  --color-ink-inverse-2:  var(--ink-inverse-2);
+
+  --color-line:           var(--line);
+  --color-line-strong:    var(--line-strong);
+
+  --color-success:        var(--success);
+  --color-danger:         var(--danger);
+
+  --font-sans: var(--font-sans);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-pop:  var(--shadow-pop);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+/* Small-caps section label */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-gold-deep);
+}
