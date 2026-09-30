@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The Bright MLS MCP server is a standalone Node package with its own
+    // tsconfig and lint surface — see mcp/bright-mls/README.md.
+    "mcp/**",
   ]),
 ]);
 

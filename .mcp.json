@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "bright-mls": {
+      "command": "node",
+      "args": ["mcp/bright-mls/dist/index.js"],
+      "env": {
+        "BRIGHT_MLS_ENV": "${BRIGHT_MLS_ENV:-test}",
+        "BRIGHT_MLS_CLIENT_ID": "${BRIGHT_MLS_CLIENT_ID}",
+        "BRIGHT_MLS_CLIENT_SECRET": "${BRIGHT_MLS_CLIENT_SECRET}",
+        "BRIGHT_MLS_SCOPE": "${BRIGHT_MLS_SCOPE:-}"
+      }
+    }
+  }
+}
