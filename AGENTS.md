@@ -34,6 +34,10 @@ npm run lint
 - `lib/underwriting.ts` — 70% rule + net-sheet math (pure functions)
 - `supabase/migrations/` — leads schema (dual-tag: cash-track vs list-track)
 - `docs/` — marketing/campaign drafts
+- `mcp/bright-mls/` — read-only MCP server for the Bright MLS RESO Web API
+  (comps, ARV, 70% rule, market stats). Standalone Node package with its own
+  `package.json`/`tsconfig` — excluded from the root tsconfig and eslint run.
+  Needs Bright API credentials and a signed data licence; see its README.
 
 ## Compliance guardrails baked into copy (do not remove)
 
